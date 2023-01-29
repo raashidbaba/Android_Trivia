@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.androidtrivia.databinding.AboutFragmentBinding
 
 class AboutFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.about_fragment,container,false)
+
+        val binding = DataBindingUtil.inflate<AboutFragmentBinding>(inflater,R.layout.about_fragment,container,false)
+  return binding.root
     }
 }
