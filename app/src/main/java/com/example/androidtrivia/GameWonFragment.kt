@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.androidtrivia.databinding.GameWonFragmentBinding
 
 class GameWonFragment : Fragment() {
@@ -26,12 +27,12 @@ class GameWonFragment : Fragment() {
             it.findNavController()
                 .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment2())
         }
-        val args = GameWonFragmentArgs.fromBundle(arguments)
+      /*  val args = GameWonFragmentArgs.fromBundle(arguments)
         Toast.makeText(
             context,
             "Num correct: ${args.numCorrect},Num Questions : ${args.numQuestions}",
             Toast.LENGTH_LONG
-        ).show()
+        ).show()*/
         setHasOptionsMenu(true)
         return binding.root
     }
@@ -48,7 +49,8 @@ class GameWonFragment : Fragment() {
 
     // Creating our Share Intent
     private fun getShareIntent(): Intent {
-        var args = GameWonFragmentArgs.fromBundle(arguments)
+        var args = GameWonFragmentArgs.fromBundle(requireArguments())
+      //  val args: GameWonFragmentArgs by navArgs<>()
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
             .putExtra(
