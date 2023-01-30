@@ -13,7 +13,8 @@ class GameOverFragment:Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
        val binding = DataBindingUtil.inflate<GameOverFragmentBinding>(inflater,R.layout.game_over_fragment,container,false)
        binding.tryAgainButton.setOnClickListener {
-           it.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment2)
+         //  it.findNavController().navigate(R.id.action_gameOverFragment_to_gameFragment2)
+           it.findNavController().navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment2())
        }
         return binding.root
     }
