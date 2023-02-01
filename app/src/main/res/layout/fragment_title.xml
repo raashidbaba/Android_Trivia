@@ -6,19 +6,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/titleConstraint"
+        android:background="#CDDC39"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/playButton"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/horizontal_margin"
-            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:layout_marginStart="44dp"
+            android:layout_marginEnd="44dp"
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
             android:text="Play"
             android:textColor="#000"
+            android:background="#2196F3"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
